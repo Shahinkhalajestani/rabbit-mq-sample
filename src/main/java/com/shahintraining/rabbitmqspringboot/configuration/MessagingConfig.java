@@ -1,8 +1,5 @@
 package com.shahintraining.rabbitmqspringboot.configuration;
 
-import com.shahintraining.rabbitmqspringboot.domain.OrderDto;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;

@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class RabbitConsumer {
 
-    private final RabbitMQFieldsConfig rabbitMQFieldsConfig;
-
+    @RabbitListener(queues = "${rabbitmq.queue}")
     public void consumeMessageFromQueue(OrderStatusDto orderStatusDto){
         System.out.println("Message received from the Queue is : "+orderStatusDto);
     }

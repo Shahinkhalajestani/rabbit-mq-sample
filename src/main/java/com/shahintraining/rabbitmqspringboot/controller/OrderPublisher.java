@@ -28,7 +28,7 @@ public class OrderPublisher {
         orderDto.setOrderId(UUID.randomUUID().toString());
         OrderStatusDto orderStatusDto = new OrderStatusDto(orderDto, "PROCESS",
                 "Order has been put successfully");
-        template.convertAndSend(fieldsConfig.getExchange(), fieldsConfig.getRoutingKey());
+        template.convertAndSend(fieldsConfig.getExchange(), fieldsConfig.getRoutingKey(),orderStatusDto);
         return ResponseEntity.ok("success");
     }
 }
